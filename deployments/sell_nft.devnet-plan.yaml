@@ -1,0 +1,19 @@
+---
+id: 0
+name: Devnet deployment
+network: devnet
+stacks-node: "http://localhost:20443"
+bitcoin-node: "http://devnet:devnet@localhost:18443"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-call:
+            contract-id: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.nft_tickets
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            method: bitcoin_mint
+            parameters:
+              - 0x00000020bc1f73e31b11b47e72ba5272add83bb12e6486e838eb8dfa9cd9ad533a9d292de8a0a0aeb8606df51091f3adbb1769fa713f403397618d6030fe28b0a98b96b622a93f64ffff7f2000000000
+            cost: 10000
+      epoch: "2.1"
+

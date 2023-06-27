@@ -11,7 +11,7 @@ The `contracts\nft_tickets` file is the implementation smart contract
 
 ## Verification of Bitcoin Transactions
 
-The verification process confirms the condition that the recipient of the transaction is the contract owner
+The verification process confirms the condition that the recipient of the bitcoin is the contract owner and that 0.1 $BTC(10000000 satoshi) is sent
   
 * verify-block-header
 * verify-merkle-proof
@@ -35,14 +35,9 @@ clarinet deployments apply -p deployments/send-btc.devnet-plan.yaml --no-dashboa
 
 5. Press N to mine the block in the clarinet dashboard
 
-6. Generate deployment plan for the stacks transaction by running the following command with the copied tx hex (replace 01..txhex). (The generation script writes the transaction bytes to the `sell_nft.yaml` file)
+6. execute the sell order by running the following command with the copied tx hex (replace 01..txhex). (The python script updates the deployment plan and calls the contract)
 ```
-python ./src/generatePlan.py 01..txhex
-```
-
-7. Call deployment plan to get the ticket
-```
-clarinet deployments apply -p deployments/buy_nft.yaml
+python ./src/executor.py 01..txhex
 ```
 
 ## Conclusion
