@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bitcoin-clarity"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "bitcoin_clarity"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyyaml = "^6.0"
+merkletools = "^1.0.3"
+
+[flake8]
+max-line-length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

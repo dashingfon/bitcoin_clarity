@@ -4,3 +4,4 @@
 .cache/**
 history.txt
 .venv/
+__pycache__/
