@@ -12,9 +12,6 @@ The `contracts\nft_tickets` file is the implementation smart contract
 ## Verification of Bitcoin Transactions
 
 The verification process confirms the condition that the recipient of the bitcoin is the contract owner and that 0.1 $BTC(10000000 satoshi) is sent
-  
-* verify-block-header
-* verify-merkle-proof
 
 ## Walkthrough
 
@@ -39,5 +36,3 @@ clarinet deployments apply -p deployments/send-btc.devnet-plan.yaml --no-dashboa
 ```
 python ./src/executor.py 01..txhex
 ```
-
-## Conclusion
